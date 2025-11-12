@@ -1,9 +1,9 @@
-name: post-to-x-every-days
+name: post-to-x-every-3-days
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "${{ secrets.RANDOM_CRON }}"
+    - cron: "0 1 */3 * *" # UTC 01:00 ≒ JST 10:00 / 3日に1回
 
 jobs:
   tweet:
